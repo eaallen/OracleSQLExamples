@@ -6,7 +6,7 @@ and what was the quantity for each of their purchases? (Sates appear in the data
 e.g. Alaska appears as “AK”.) Only show customer first name, last name, and quantity.
 
 */
-SELECT DISTINCT
+SELECT 
   c.firstName
   ,c.lastName
   ,s.quantity
