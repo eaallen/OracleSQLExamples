@@ -15,7 +15,7 @@ JOIN
 ON 
   m.manufacturerID = p.manufacturerID
 WHERE 
-  to_char(s.saleDate, 'mm') = '02'
+  EXTRACT(MONTH FROM s.saleDate) = 2
 ;
 
 exit

@@ -21,7 +21,9 @@ ON
 WHERE
   c.state = 'CA'
 AND
-  to_char(s.saleDate, 'mm') = '08' -- AUG
+  EXTRACT(MONTH from s.saleDate) = 8 -- AUG
+AND
+  m.manufacturerName = 'Adidas'
 ;
 
 exit

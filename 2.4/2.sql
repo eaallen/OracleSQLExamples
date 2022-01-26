@@ -19,7 +19,9 @@ ON
 WHERE 
   p.category = 'boots'
 AND 
-  to_char(s.saleDate, 'mm') = '01' -- Jan.
+  EXTRACT(MONTH from s.saleDate) = 1 -- Jan.
+ORDER BY 
+  c.state
 ;
 
 exit

@@ -5,7 +5,7 @@ with list prices between $130 and $150 inclusive.
 Show customer first name, last name and states.
 
 */
-SELECT
+SELECT DISTINCT
   c.firstName
   ,c.lastName
   ,c.state

@@ -5,7 +5,7 @@ bought products whose list price is over $150.
 Use aliases on table names. Only show customer information.
 
 */
-SELECT
+SELECT DISTINCT
   c.*
 FROM   
   sale s

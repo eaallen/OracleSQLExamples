@@ -17,11 +17,13 @@ JOIN
 ON 
   m.manufacturerID = p.manufacturerID
 WHERE 
-  to_char(s.saleDate, 'mm') = '07' -- JULY
+  EXTRACT(MONTH FROM s.saleDate) = 7 -- JULY
 AND
   p.color = 'White'
 AND
   m.manufacturerName = 'Nike'
+AND
+  p.category = 'sneakers'
 ;
 
 exit

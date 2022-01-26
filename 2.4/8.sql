@@ -5,7 +5,7 @@ Sort on full name, with last name being the primary sort.
 (Colors are capitalized in the database.) 
 Only show customer names, last name then first name.
 */
-SELECT
+SELECT DISTINCT
   c.lastName
   ,c.firstName
 FROM   

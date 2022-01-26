@@ -3,7 +3,7 @@
 List the states of manufacturers who have made sneakers purchased 
 by customers living in Kansas. Use alias names. Only show states.
 */
-SELECT
+SELECT DISTINCT
   m.state
 FROM   
   sale s
