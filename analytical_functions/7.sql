@@ -16,7 +16,7 @@ SELECT
     ,risk_level
     ,sum(fine) over(partition by risk_level) risk_level_total
     ,sum(fine) over(order by inspection_date rows between unbounded preceding and current row) as employee_running_total
-    ,avg(fine) over(order by inspection_date rows between 9 preceding and current row) as trailing_ten_average
+    ,ROUND(avg(fine) over(order by inspection_date rows between 9 preceding and current row),0) as trailing_ten_average
 FROM 
     inspection_summary
 WHERE
